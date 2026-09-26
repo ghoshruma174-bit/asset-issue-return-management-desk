@@ -1,0 +1,161 @@
+.dashboard-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+}
+
+/* ================= SIDEBAR ================= */
+
+.dashboard-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #071a3d, #0b4f8a);
+  color: white;
+  padding: 25px 15px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* Logo */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 10px 30px;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #50ef72, #4fd9ff);
+  color: #071a3d;
+
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sidebar-logo h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.sidebar-logo span {
+  color: #a9c3dc;
+  font-size: 10px;
+}
+
+/* Menu title */
+
+.menu-title {
+  color: #8ba7c5;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 0 12px;
+  margin: 0 0 10px;
+}
+
+/* Sidebar buttons */
+
+.sidebar-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+
+  color: #c4d2e2;
+
+  padding: 13px 14px;
+  margin-bottom: 5px;
+
+  border-radius: 10px;
+
+  text-align: left;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: white;
+}
+
+.sidebar-item.active {
+  background: linear-gradient(
+    90deg,
+    rgba(80, 239, 114, 0.2),
+    rgba(79, 217, 255, 0.15)
+  );
+
+  color: white;
+
+  box-shadow: inset 3px 0 0 #50ef72;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-item.logout {
+  color: #ffb5b5;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.dashboard-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+  .dashboard-sidebar {
+    width: 75px;
+    padding: 20px 8px;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+    padding: 5px 0 25px;
+  }
+
+  .sidebar-logo > div:last-child,
+  .menu-title {
+    display: none;
+  }
+
+  .sidebar-item {
+    text-align: center;
+    padding: 13px 5px;
+    font-size: 0;
+  }
+
+  .sidebar-item::first-letter {
+    font-size: 18px;
+  }
+
+  .dashboard-content {
+    margin-left: 75px;
+    width: calc(100% - 75px);
+  }
+}

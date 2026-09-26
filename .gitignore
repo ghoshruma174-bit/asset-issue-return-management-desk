@@ -1,0 +1,26 @@
+# Spring Boot local configuration
+backend/src/main/resources/application.properties
+# Java / Maven
+backend/target/
+*.class
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
