@@ -1,14 +1,15 @@
 services:
   - type: web
-    name: web
+    name: asset-management-frontend
     runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
-    staticPublishPath: ./frontend/dist
+    staticPublishPath: dist
+
   - type: web
-    name: api
+    name: asset-management-backend
     runtime: docker
     rootDir: backend
-    dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
     healthCheckPath: /health
